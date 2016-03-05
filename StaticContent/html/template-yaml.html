@@ -1,0 +1,238 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Matriculla -- Coaching And Tution Center Finder</title>
+  <meta name="description" content=""/>
+  <meta name="author" content="shagun"/>
+  <!-- mobile viewport optimisation -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="../js/yaml/core/base.min.css" type="text/css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+  <!-- script -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!--<link rel="stylesheet" href="css/styles.css" type="text/css"/>-->
+  <!--[if lte IE 7]>
+  <link rel="stylesheet" href="yaml/core/iehacks.min.css" type="text/css"/>
+  <![endif]-->
+  <!--<div class="ym-grid ym-equalize">-->
+  <style>
+    .box-div{
+          border:1px solid #CCC;
+          background:#F8F8FF;
+          box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+          vertical-align:middle;
+        }
+    .box-div-pad{
+          border:1px solid #CCC;
+          background:#F8F8FF;
+          box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+          vertical-align:middle;
+          padding: 10px;
+        }  
+  </style>
+  <script>
+    $(document).ready(function() {  $("#location-select").select2();
+                                    $("#standard-select").select2();
+                                    $("#subject-select").select2(); });
+    $(document).ready( $(function(){
+                          $('.tree-toggle').parent().children('ul.tree').toggle(200);
+                      }))
+  </script>
+    <div class="ym-grid ym-equalize">
+      <!--<div class="ym-g20">
+          <a class="navbar-brand" href="#"><img src="../image/logo.png" style="width:50px;height:50px;"></a>
+      </div>-->
+      <!--<div class="ym-g80">-->
+          <a class="navbar-brand" href="#"><img src="../image/logo.png" style="width:50px; height:50px; vertical-align:top;"></a>
+         <p style="font-size: 400%; color:#000080; font-family:Tangerine; text-align:left; vertical-align:bottom; display:inline-block">Matriculla</p>
+      <!--</div>-->
+    </div>
+    <div class="ym-grid ym-equalize box-div">
+      <div class="ym-g66">
+          <p style="color:#000080; padding-left:80px; text-align:left">Find details of most popular coaching centers in your locality for any subject, starting class 6th onwards</p>
+      </div>
+      <div class="ym-g33" style="padding-right:20px">
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Contribute</a></li>
+          </ul>
+      </div>
+    </div>
+  <!--</div>-->
+</head>
+<body>
+  <!--<div class="ym-grid ym-equalize">-->
+    <div class="ym-grid ym-equalize box-div-pad">
+        <div class="ym-g25">
+          <label for="location-input" id="location-label">Choose Locality: </label>
+            <select id="location-select">
+              <option value="ED">East Delhi</option>
+              <option value="WD">West Delhi</option>
+              <option value="SD">South Delhi</option>
+              <option value="ND">North Delhi</option>
+            </select>
+        </div>
+        <div class="ym-g25">
+            <label for="std-input" id="std-label">Choose Class: </label>
+            <select id="std-input">
+              <option value="X">Class X</option>
+              <option value="XI">Class XI</option>
+              <option value="XII">Class XII</option>
+            </select>
+        </div>
+        <div class="ym-g25">
+            <label for="subject-input" id="subject-label">Choose Subject: </label>
+            <select id="subjet-input">
+              <option value="PHY">Physics</option>
+              <option value="CHEM">Chemistry</option>
+              <option value="MATHS">Mathematics</option>
+              <option value="BIO">Biology</option>
+            </select>
+        </div>
+        <div class="ym-g25">
+          <button type = "button" class = "btn btn-default" id="search-button">Search</button>
+        </div>
+    </div>
+    <div class="ym-grid ym-equalize">
+        <div class="ym-g25 ym-gl box-div-pad">
+            <div>
+          <h4> Select an area and do a quick search</h4>  
+          <button type = "button" class = "btn btn-default" id="quick-search-button">Quick Search</button>
+        </div>
+        <br/>
+        <div id="treeview-container">
+        <ul>
+          <li>East Delhi
+            <ul>
+              <li data-value="CP">Cannaught Place</li>
+              <li data-value="NP">Nehru PLace</li>
+            </ul>
+          </li>
+          <br/>
+          <li>West Delhi
+            <ul>
+              <li data-value="UN">Uttam Nagar</li>
+              <li data-value="DW">Dwarka</li>
+              <li data-value="VN">Vikas Nagar</li>
+            </ul>
+          </li>
+          <br/>
+          <li>South Delhi
+            <ul>
+              <li data-value="GU">Gurgaon</li>
+              <li data-value>Greater Kailash</li>
+            </ul>
+          </li>
+          <br/>
+          <li>North Delhi
+            <ul>
+              <li data-value="NO">Noida</li>
+              <li data-value="PR">Preetampura</li>
+              <li data-value="RO">Rohini</li>
+            </ul>
+          </li>
+        </ul>
+        </div>
+
+    </div>
+    <div class="ym-g50 ym-gl box-div-pad" style="background: #FFF8DC;">CollegeInfoDisplay</div>
+    <div class="ym-g25 ym-gr">
+        <div class="ym-grid box-div-pad">
+          <h4>Free Online Courses Available</h4>
+          <ul>
+            <li><a href="#">Online Course One</a></li>
+            <br/>
+            <li><a href="#">Online Course Two</a></li>
+            <br/>
+            <li><a href="#">Online Course Three</a></li>
+            <br/>
+            <li><a href="#">Online Course Four</a></li>
+            <br/>
+            <li><a href="#">Online Course Five</a></li>
+            <br/>
+          </ul>
+        </div>
+        <div class="ym-grid box-div-pad">
+          <h4>Study Material</h4>
+          <ul>
+            <li><a href="#" class="tree-toggle nav-header">Mathematics</a>
+              <ul class="nav nav-list tree">
+                <br/>
+                <li><span display="inline:block">Class XII
+                  <a href="#">
+                          <span class="glyphicon glyphicon-download-alt"></span>
+                      </a>
+                      </span>
+                    </li>
+                    <br/>
+                <li><span display="inline:block">Class X
+                  <a href="#">
+                          <span class="glyphicon glyphicon-download-alt"></span>
+                      </a>
+                      </span>
+                    </li>
+              </ul>
+            </li>
+            <br/>
+            <li><a href="#" class="tree-toggle nav-header">Physics</a>
+              <ul class="nav nav-list tree">
+                <br/>
+                <li><span display="inline:block">Class XII
+                  <a href="#">
+                          <span class="glyphicon glyphicon-download-alt"></span>
+                      </a>
+                      </span>
+                    </li>
+                    <br/>
+                <li><span display="inline:block">Class X
+                  <a href="#">
+                          <span class="glyphicon glyphicon-download-alt"></span>
+                      </a>
+                      </span>
+                    </li>
+              </ul>
+            </li>
+            <br/>
+            <li><a href="#" class="tree-toggle nav-header">Chemistry</a>
+              <ul class="nav nav-list tree">
+                <br/>
+                <li><span display="inline:block">Class XII
+                  <a href="#">
+                          <span class="glyphicon glyphicon-download-alt"></span>
+                      </a>
+                      </span>
+                    </li>
+                    <br/>
+                <li><span display="inline:block">Class X
+                  <a href="#">
+                          <span class="glyphicon glyphicon-download-alt"></span>
+                      </a>
+                      </span>
+                    </li>
+              </ul>
+            </li>
+            <br/>
+          </ul>
+        </div>
+    </div>
+    </div>
+    <script src="../js/logger.min.js"></script>
+    <script src="../js/treeview.min.js"></script>
+    <script>
+      $(function(){
+          $('.tree-toggle').parent().children('ul.tree').toggle(200);
+        })
+      $('#treeview-container').treeview({
+        data : ['UN']
+      });
+      $('.tree-toggle').click(function () {
+          $(this).parent().children('ul.tree').toggle(200);
+        });
+    </script>
+</body>
+</html>
