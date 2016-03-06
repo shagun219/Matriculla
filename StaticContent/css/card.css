@@ -1,0 +1,17 @@
+.card {
+    background:white;
+    border:1px solid #AAA;
+    border-bottom:3px solid #BBB;
+    padding:0px;
+    margin:15px;
+    overflow:hidden;
+}
+.card h4 {
+    margin:0px;
+    padding:10px;
+    padding-bottom:0px;
+}
+.card p {
+    margin:0px;
+    padding:10px;
+}
