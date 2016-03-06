@@ -14,12 +14,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" />
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine" />
   <link rel="stylesheet" href="../css/jquery.treegrid.css" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <!--script-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
   <script src="../js/logger.min.js"></script>
   <script src="../js/treeview.min.js"></script>
   <script src="../js/jquery.treegrid.js" type="text/javascript"></script>
+  <script src="../js/carousel.js" type="text/javascript"></script>
   
   <style>
     .box-div{
@@ -44,6 +46,18 @@
     }
     li{
           list-style-type: none;   
+    }
+    #carousel {
+          margin-top: 20px;
+    }
+    .item .thumb {
+          width: 25%;
+          cursor: pointer;
+          float: left;
+    }
+    .item .thumb img, .item img {
+          width: 100%;
+          height: 150px;    
     }
   </style>
   <script>
@@ -145,6 +159,33 @@
     </div>
   </div>
 
+  <div class="ym-wrap">
+        <div class="clearfix">
+        <div id="thumbcarousel" class="carousel slide" data-interval="false">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div data-target="#carousel" data-slide-to="0" class="thumb"><img src="../image/bannerimg1.jpeg"></div>
+                    <div data-target="#carousel" data-slide-to="1" class="thumb"><img src="../image/bannerimg2.jpeg"></div>
+                    <div data-target="#carousel" data-slide-to="2" class="thumb"><img src="../image/bannerimg3.jpeg"></div>
+                    <div data-target="#carousel" data-slide-to="3" class="thumb"><img src="../image/bannerimg4.jpeg"></div>
+                </div><!-- /item -->
+                <div class="item">
+                    <div data-target="#carousel" data-slide-to="4" class="thumb"><img src="../image/bannerimg5.jpeg"></div>
+                    <div data-target="#carousel" data-slide-to="5" class="thumb"><img src="../image/bannerimg6.jpeg"></div>
+                    <div data-target="#carousel" data-slide-to="6" class="thumb"><img src="../image/bannerimg7.jpeg"></div>
+                    <div data-target="#carousel" data-slide-to="7" class="thumb"><img src="../image/bannerimg8.jpeg"></div>
+                </div><!-- /item -->
+            </div><!-- /carousel-inner -->
+            <a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#thumbcarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div> <!-- /thumbcarousel -->
+      </div><!-- /cleafix -->
+  </div>
+
   <div class="ym-grid ym-equalize">
     <div class="ym-g25 ym-gl box-div-pad">
       <div>
@@ -240,6 +281,16 @@
             <td class="li-underline"><span display="inline:block">Class X <a href="#"><span class="glyphicon glyphicon-download-alt"></a></span></td>
           </tr>
         </table>
+      </div>
+    </div>
+  </div>
+  <div class="ym-wrap box-div" style="background:#F5F5F5" id="footer">
+    <div class="ym-grid ym-equalize">
+      <div class="ym-g25 ym-gl">
+        <p style="color:#000080; font-size:200%; font-family:Tangerine; text-align:left; padding-left:20px;">All content copyright @ <a href="#">www.matriculla.com</a></p>
+      </div>
+      <div class="ym-g75 ym-gl">
+        <p style="color:#000080; font-size:200%; font-family:Tangerine; text-align:left; padding-left:20px;">Contact us : help@matriculla.com</p>
       </div>
     </div>
   </div>
